@@ -1,0 +1,225 @@
+:root {
+  --red: #e30613;
+  --black: #111111;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #fff;
+
+  color: #111;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.siteHeader {
+  width: 100%;
+
+  height: 70px;
+
+  background: white;
+
+  border-bottom: 1px solid #e5e5e5;
+
+  position: relative;
+
+  z-index: 10;
+}
+
+.headerInner {
+  width: 82%;
+
+  max-width: 1250px;
+
+  height: 100%;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.brandMark {
+  padding: 8px 10px;
+
+  background: #e30613;
+
+  color: white;
+
+  font-size: 21px;
+
+  font-weight: 900;
+
+  font-style: italic;
+}
+
+.brandText {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.brandText strong {
+  font-size: 14px;
+}
+
+.brandText small {
+  margin-top: 2px;
+
+  color: #777;
+
+  font-size: 10px;
+}
+
+
+/* MENU */
+
+.mainNav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+}
+
+.mainNav a {
+  position: relative;
+
+  color: #222;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.mainNav a:hover,
+.mainNav a.active {
+  color: #e30613;
+}
+
+.mainNav a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: -24px;
+
+  height: 3px;
+
+  background: #e30613;
+}
+
+
+/* BOTÃO */
+
+.headerButton {
+  padding: 12px 20px;
+
+  background: #e30613;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  border-radius: 3px;
+
+  transition: .2s;
+}
+
+.headerButton:hover {
+  background: #c9000c;
+
+  transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+.mobileMenu {
+  display: none;
+
+  border: none;
+
+  background: transparent;
+
+  font-size: 25px;
+}
+
+
+@media (max-width: 900px) {
+
+  .headerInner {
+    width: 90%;
+  }
+
+  .mainNav {
+    display: none;
+  }
+
+  .headerButton {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .brandText {
+    display: none;
+  }
+
+  .siteHeader {
+    height: 65px;
+  }
+
+}
