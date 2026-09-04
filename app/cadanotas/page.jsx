@@ -7,20 +7,24 @@ import styles from "./page.module.css"
 
 export default function CadNotas() {
 
-    const [aluno, setAluno] = useState('')
-    const [materia, setMateria] = useState('')
-    const [nota1, setNota1] = useState('')
-    const [nota2, setNota2] = useState('')
+    const [nomeAluno, setNomeAluno] = useState('')
+    const [t1, setT1] = useState('')
+    const [t2, setT2] = useState('')
+    const [n1, setN1] = useState('')
+    const [n2, setN2] = useState('')
+    const [n3, setN3] = useState('')
 
     function salvarNota(e) {
         e.preventDefault()
 
-        alert("Nota cadastrada com sucesso!")
+        alert("Notas cadastradas com sucesso!")
 
-        setAluno('')
-        setMateria('')
-        setNota1('')
-        setNota2('')
+        setNomeAluno('')
+        setT1('')
+        setT2('')
+        setN1('')
+        setN2('')
+        setN3('')
     }
 
     return (
@@ -34,37 +38,22 @@ export default function CadNotas() {
                     <h2>Cadastro de Notas</h2>
 
                     <p className={styles.subtitulo}>
-                        Preencha os dados da nota do aluno
+                        Preencha as notas do aluno
                     </p>
 
                     <form onSubmit={salvarNota}>
 
                         <div className={styles.campo}>
-                            <label htmlFor="aluno">
-                                Aluno
+                            <label htmlFor="nomeAluno">
+                                Nome do aluno
                             </label>
 
                             <input
-                                id="aluno"
+                                id="nomeAluno"
                                 type="text"
                                 placeholder="Digite o nome do aluno"
-                                value={aluno}
-                                onChange={(e) => setAluno(e.target.value)}
-                                required
-                            />
-                        </div>
-
-                        <div className={styles.campo}>
-                            <label htmlFor="materia">
-                                Matéria
-                            </label>
-
-                            <input
-                                id="materia"
-                                type="text"
-                                placeholder="Digite a matéria"
-                                value={materia}
-                                onChange={(e) => setMateria(e.target.value)}
+                                value={nomeAluno}
+                                onChange={(e) => setNomeAluno(e.target.value)}
                                 required
                             />
                         </div>
@@ -72,45 +61,103 @@ export default function CadNotas() {
                         <div className={styles.linha}>
 
                             <div className={styles.campo}>
-                                <label htmlFor="nota1">
-                                    Nota 1
+                                <label htmlFor="t1">
+                                    T1 - Trabalho 1
                                 </label>
 
                                 <input
-                                    id="nota1"
+                                    id="t1"
                                     type="number"
                                     step="0.1"
                                     min="0"
                                     max="10"
                                     placeholder="0 a 10"
-                                    value={nota1}
-                                    onChange={(e) => setNota1(e.target.value)}
+                                    value={t1}
+                                    onChange={(e) => setT1(e.target.value)}
                                     required
                                 />
                             </div>
 
                             <div className={styles.campo}>
-                                <label htmlFor="nota2">
-                                    Nota 2
+                                <label htmlFor="t2">
+                                    T2 - Trabalho 2
                                 </label>
 
                                 <input
-                                    id="nota2"
+                                    id="t2"
                                     type="number"
                                     step="0.1"
                                     min="0"
                                     max="10"
                                     placeholder="0 a 10"
-                                    value={nota2}
-                                    onChange={(e) => setNota2(e.target.value)}
+                                    value={t2}
+                                    onChange={(e) => setT2(e.target.value)}
                                     required
                                 />
                             </div>
 
                         </div>
 
+                        <div className={styles.linha}>
+
+                            <div className={styles.campo}>
+                                <label htmlFor="n1">
+                                    N1 - Nota 1
+                                </label>
+
+                                <input
+                                    id="n1"
+                                    type="number"
+                                    step="0.1"
+                                    min="0"
+                                    max="10"
+                                    placeholder="0 a 10"
+                                    value={n1}
+                                    onChange={(e) => setN1(e.target.value)}
+                                    required
+                                />
+                            </div>
+
+                            <div className={styles.campo}>
+                                <label htmlFor="n2">
+                                    N2 - Nota 2
+                                </label>
+
+                                <input
+                                    id="n2"
+                                    type="number"
+                                    step="0.1"
+                                    min="0"
+                                    max="10"
+                                    placeholder="0 a 10"
+                                    value={n2}
+                                    onChange={(e) => setN2(e.target.value)}
+                                    required
+                                />
+                            </div>
+
+                        </div>
+
+                        <div className={styles.campo}>
+                            <label htmlFor="n3">
+                                N3 - Nota 3
+                            </label>
+
+                            <input
+                                id="n3"
+                                type="number"
+                                step="0.1"
+                                min="0"
+                                max="10"
+                                placeholder="0 a 10"
+                                value={n3}
+                                onChange={(e) => setN3(e.target.value)}
+                                required
+                            />
+                        </div>
+
                         <button type="submit">
-                            Salvar nota
+                            Salvar notas
                         </button>
 
                     </form>
