@@ -1,3 +1,4 @@
+
 'use client'
 
 import Header from "../componentes/header"
@@ -26,11 +27,12 @@ export default function ListNotas() {
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Aluno</th>
-                                    <th>Matéria</th>
-                                    <th>Nota 1</th>
-                                    <th>Nota 2</th>
-                                    <th>Média</th>
+                                    <th>Nome do aluno</th>
+                                    <th>T1</th>
+                                    <th>T2</th>
+                                    <th>N1</th>
+                                    <th>N2</th>
+                                    <th>N3</th>
                                     <th>Ações</th>
                                 </tr>
                             </thead>
@@ -40,13 +42,13 @@ export default function ListNotas() {
                                 <tr>
                                     <td>1</td>
                                     <td>Heitor Degan</td>
-                                    <td>Matemática</td>
                                     <td>8,0</td>
                                     <td>9,0</td>
+                                    <td>7,5</td>
                                     <td>8,5</td>
+                                    <td>9,0</td>
 
                                     <td className={styles.acoes}>
-
                                         <button className={styles.editar}>
                                             Editar
                                         </button>
@@ -54,20 +56,19 @@ export default function ListNotas() {
                                         <button className={styles.deletar}>
                                             Deletar
                                         </button>
-
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>2</td>
                                     <td>João Silva</td>
-                                    <td>Português</td>
                                     <td>7,0</td>
                                     <td>8,0</td>
+                                    <td>8,5</td>
                                     <td>7,5</td>
+                                    <td>9,0</td>
 
                                     <td className={styles.acoes}>
-
                                         <button className={styles.editar}>
                                             Editar
                                         </button>
@@ -75,7 +76,6 @@ export default function ListNotas() {
                                         <button className={styles.deletar}>
                                             Deletar
                                         </button>
-
                                     </td>
                                 </tr>
 
@@ -91,4 +91,3 @@ export default function ListNotas() {
         </>
     )
 }
-

@@ -1,3 +1,4 @@
+
 .container {
     min-height: calc(100vh - 80px);
     padding: 40px 20px;
@@ -36,15 +37,19 @@
 .tabelaContainer table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 850px;
+    min-width: 900px;
 }
 
 .tabelaContainer th {
     padding: 15px;
-    text-align: left;
+    text-align: center;
     background: #0072ce;
     color: white;
     font-size: 15px;
+}
+
+.tabelaContainer th:nth-child(2) {
+    text-align: left;
 }
 
 .tabelaContainer td {
@@ -52,6 +57,12 @@
     border-bottom: 1px solid #e5e5e5;
     color: #444;
     font-size: 15px;
+    text-align: center;
+}
+
+.tabelaContainer td:nth-child(2) {
+    text-align: left;
+    font-weight: 500;
 }
 
 .tabelaContainer tbody tr:hover {
@@ -60,6 +71,7 @@
 
 .acoes {
     display: flex;
+    justify-content: center;
     gap: 8px;
 }
 
@@ -103,4 +115,3 @@
         font-size: 24px;
     }
 }
-
