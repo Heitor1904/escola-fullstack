@@ -12,15 +12,41 @@ export default function CadAlunos() {
     const [serie, setSerie] = useState('');
     const [ra, setRa] = useState('');
 
-    function salvarAluno(e) {
+    async function salvarAluno(e) {
         e.preventDefault();
 
-        alert("Aluno cadastrado com sucesso!");
+        try {
+            const resposta = await fetch("/api/alunos", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    nome,
+                    idade: Number(idade),
+                    serie,
+                    ra
+                })
+            });
 
-        setNome('');
-        setIdade('');
-        setSerie('');
-        setRa('');
+            const dados = await resposta.json();
+
+            if (!resposta.ok) {
+                alert(dados.mensagem);
+                return;
+            }
+
+            alert("Aluno cadastrado com sucesso!");
+
+            setNome('');
+            setIdade('');
+            setSerie('');
+            setRa('');
+
+        } catch (error) {
+            console.error(error);
+            alert("Erro ao cadastrar aluno");
+        }
     }
 
     return (
@@ -73,7 +99,7 @@ export default function CadAlunos() {
                                 <input
                                     id="serie"
                                     type="text"
-                                    placeholder="Ex: 2º Ano"
+                                    placeholder="Ex: 3B"
                                     value={serie}
                                     onChange={(e) => setSerie(e.target.value)}
                                     required
