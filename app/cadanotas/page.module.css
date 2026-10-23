@@ -1,0 +1,186 @@
+/* CONTAINER PRINCIPAL */
+.container {
+    min-height: calc(100vh - 80px) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 40px 20px !important;
+    background-color: #f3f4f6 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* CARD / PAINEL BRANCO */
+.card,
+.painel {
+    width: 100% !important;
+    max-width: 520px !important;
+    background: #ffffff !important;
+    padding: 40px 48px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+    box-sizing: border-box !important;
+    border: none !important;
+}
+
+/* STATUS / SISTEMA ONLINE (SE HOUVER) */
+.status {
+    display: block !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    color: #333333 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 6px !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* TÍTULO PRINCIPAL DO CADASTRO */
+.card h2,
+.painel h2,
+.title,
+.titulo {
+    margin: 0 0 8px 0 !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #222222 !important;
+    letter-spacing: -0.5px !important;
+}
+
+/* SUBTÍTULO DA PÁGINA */
+.subtitulo,
+.subtitle {
+    margin-top: 0 !important;
+    margin-bottom: 28px !important;
+    color: #666666 !important;
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+}
+
+/* ESTRUTURA DO FORMULÁRIO */
+.form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+}
+
+/* AGRUPAMENTO DE CAMPOS */
+.campo,
+.inputGroup {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    margin-bottom: 0 !important;
+}
+
+.campo label,
+.inputGroup label {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #222222 !important;
+}
+
+/* ENTRADAS DE TEXTO E SELECTS */
+.campo input,
+.campo select,
+.inputGroup input,
+.inputGroup select {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 14px !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+    font-size: 15px !important;
+    outline: none !important;
+    background: #ffffff !important;
+    color: #333333 !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.campo input::placeholder,
+.inputGroup input::placeholder {
+    color: #9ca3af !important;
+}
+
+.campo input:focus,
+.campo select:focus,
+.inputGroup input:focus,
+.inputGroup select:focus {
+    border-color: #c8102e !important;
+    box-shadow: 0 0 0 2px rgba(200, 16, 46, 0.15) !important;
+}
+
+/* SUPORTE A DUAS COLUNAS */
+.linha {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+}
+
+/* BOTÃO PRINCIPAL VERMELHO */
+.botao,
+.button,
+.card button,
+.painel button {
+    width: 100% !important;
+    padding: 14px !important;
+    margin-top: 10px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    background-color: #c8102e !important;
+    background: #c8102e !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+    transform: none !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.botao:hover,
+.button:hover,
+.card button:hover,
+.painel button:hover {
+    background-color: #a50d25 !important;
+    background: #a50d25 !important;
+}
+
+/* BOTÃO SECUNDÁRIO / CANCELAR */
+.botaoCancelar,
+.buttonCancel {
+    width: 100% !important;
+    padding: 12px !important;
+    margin-top: 8px !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+    background-color: transparent !important;
+    color: #4b5563 !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.botaoCancelar:hover,
+.buttonCancel:hover {
+    background-color: #f3f4f6 !important;
+}
+
+/* AJUSTES PARA DISPOSITIVOS MÓVEIS */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 12px !important;
+    }
+
+    .card,
+    .painel {
+        padding: 28px 20px !important;
+        border-radius: 12px !important;
+    }
+
+    .linha {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+}
