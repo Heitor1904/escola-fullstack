@@ -1,53 +1,52 @@
+
 .container {
-min-height: calc(100vh - 80px);
-padding: 40px 20px;
-background-color: #f4f4f4;
-box-sizing: border-box;
+    min-height: calc(100vh - 80px);
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-.card {
-    width: 100%;
-    max-width: 1150px;
-    margin: 0 auto;
-    padding: 35px;
-    box-sizing: border-box;
-    background: white;
-    border-radius: 14px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-=======
 .headerSection {
-max-width: 1200px;
-margin: 0 auto 25px;
->>>>>>> 6722cf1 (Atualizando projeto)
+    max-width: 1200px;
+    margin: 0 auto 25px;
 }
 
 .headerSection h2 {
-margin: 0 0 8px;
-color: #c62828;
-font-size: 28px;
+    margin: 0 0 8px;
+    color: #c62828;
+    font-size: 28px;
 }
 
 .headerSection p {
-margin: 0;
-color: #666;
-font-size: 15px;
+    margin: 0;
+    color: #666;
+    font-size: 15px;
 }
 
-<<<<<<< HEAD
+/* Cartão principal */
 
-/* =========================
-   ÁREA DE EDIÇÃO
-========================= */
+.card,
+.tableCard {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+/* Área de edição */
 
 .edicao {
     width: 100%;
+    margin-bottom: 30px;
+    padding: 24px;
     box-sizing: border-box;
     background: #f8fafc;
     border: 1px solid #dfe3e8;
     border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 30px;
 }
 
 .tituloEdicao {
@@ -69,12 +68,11 @@ font-size: 15px;
     font-size: 14px;
 }
 
-
-/* CAMPOS */
+/* Campos de edição */
 
 .camposEdicao {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 14px;
     margin-bottom: 22px;
 }
@@ -82,6 +80,7 @@ font-size: 15px;
 .campo {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .campo label {
@@ -98,19 +97,18 @@ font-size: 15px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 7px;
-    background: white;
+    background: #fff;
     color: #333;
     font-size: 14px;
 }
 
 .campo input:focus {
     outline: none;
-    border-color: #0072ce;
-    box-shadow: 0 0 0 2px rgba(0, 114, 206, 0.1);
+    border-color: #c62828;
+    box-shadow: 0 0 0 2px rgba(198, 40, 40, 0.12);
 }
 
-
-/* BOTÕES DA EDIÇÃO */
+/* Botões da edição */
 
 .botoesEdicao {
     display: flex;
@@ -121,19 +119,19 @@ font-size: 15px;
     border: none;
     padding: 10px 18px;
     border-radius: 7px;
-    color: white;
+    color: #fff;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.2s;
+    transition: background 0.2s;
 }
 
 .salvar {
-    background: #0072ce;
+    background: #c62828;
 }
 
 .salvar:hover {
-    background: #005da8;
+    background: #a51d1d;
 }
 
 .cancelar {
@@ -144,229 +142,197 @@ font-size: 15px;
     background: #555;
 }
 
-
-/* =========================
-   TABELA
-========================= */
+/* Tabela */
 
 .tabelaContainer {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     overflow-x: auto;
-=======
-.tableCard {
-max-width: 1200px;
-margin: 0 auto;
-padding: 25px;
-background-color: #fff;
-border-radius: 10px;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-box-sizing: border-box;
->>>>>>> 6722cf1 (Atualizando projeto)
 }
 
 .actions {
-display: flex;
-align-items: center;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 15px;
-margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .search {
-width: 100%;
-max-width: 350px;
-padding: 12px;
-border: 1px solid #ccc;
-border-radius: 6px;
-font-size: 14px;
-box-sizing: border-box;
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    color: #222;
+    font-size: 14px;
+    box-sizing: border-box;
 }
 
 .search:focus {
-outline: 2px solid #c62828;
-border-color: #c62828;
+    outline: 2px solid #c62828;
+    border-color: #c62828;
 }
 
 .total {
-color: #666;
-font-size: 14px;
+    color: #666;
+    font-size: 14px;
 }
 
 .tableWrapper {
-width: 100%;
-overflow-x: auto;
+    width: 100%;
+    overflow-x: auto;
 }
 
-.table {
-width: 100%;
-min-width: 750px;
-border-collapse: collapse;
+.table,
+.tabela {
+    width: 100%;
+    min-width: 750px;
+    border-collapse: collapse;
 }
 
-<<<<<<< HEAD
+.table th,
+.tabela th {
+    padding: 15px;
+    background: #c62828;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
 
-/* =========================
-   BOTÕES DA TABELA
-========================= */
+.table th:first-child,
+.tabela th:first-child {
+    text-align: left;
+}
 
+.table td,
+.tabela td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    text-align: center;
+    font-size: 14px;
+}
+
+.table td:first-child,
+.tabela td:first-child {
+    text-align: left;
+}
+
+.table tbody tr:hover,
+.tabela tbody tr:hover {
+    background: #fff1f1;
+}
+
+/* Botões da tabela */
+
+.buttons,
 .acoes {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 8px;
 }
 
+.buttons button,
 .acoes button {
     position: relative;
-    z-index: 5;
+    z-index: 1;
     border: none;
-    padding: 8px 14px;
-    border-radius: 6px;
-    color: white;
+    padding: 9px 12px;
+    border-radius: 5px;
+    color: #fff;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.2s;
-=======
-.table th {
-padding: 15px;
-background-color: #c62828;
-color: white;
-text-align: center;
-font-size: 14px;
-}
-
-.table th:first-child {
-text-align: left;
->>>>>>> 6722cf1 (Atualizando projeto)
-}
-
-.table td {
-padding: 15px;
-border-bottom: 1px solid #eee;
-color: #444;
-text-align: center;
-font-size: 14px;
-}
-
-.table td:first-child {
-text-align: left;
-}
-
-.table tbody tr:hover {
-background-color: #fff1f1;
-}
-
-.buttons {
-display: flex;
-justify-content: center;
-gap: 8px;
+    transition: background 0.2s;
 }
 
 .editButton,
-.deleteButton {
-padding: 9px 12px;
-border: none;
-border-radius: 5px;
-color: white;
-font-size: 13px;
-font-weight: bold;
-cursor: pointer;
+.botaoEditar,
+.editar {
+    background: #c62828;
 }
 
-.editButton {
-background-color: #c62828;
+.editButton:hover,
+.botaoEditar:hover,
+.editar:hover {
+    background: #a51d1d;
 }
 
-.editButton:hover {
-background-color: #a51d1d;
+.deleteButton,
+.botaoExcluir,
+.deletar {
+    background: #222;
 }
 
-.deleteButton {
-background-color: #222;
+.deleteButton:hover,
+.botaoExcluir:hover,
+.deletar:hover {
+    background: #444;
 }
 
-.deleteButton:hover {
-background-color: #444;
+.buttons button:disabled,
+.acoes button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
-.empty {
-padding: 25px !important;
-text-align: center !important;
-color: #777 !important;
-}
+/* Mensagens da tabela */
 
-
-/* =========================
-   SEM NOTAS
-========================= */
-
+.empty,
 .semNotas {
     padding: 30px !important;
     text-align: center !important;
     color: #777 !important;
 }
 
-
-/* =========================
-   RESPONSIVO
-========================= */
+/* Responsividade */
 
 @media (max-width: 900px) {
-
     .camposEdicao {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-
 }
 
 @media (max-width: 700px) {
-<<<<<<< HEAD
-
     .container {
-        padding: 25px 15px;
+        padding: 25px 12px;
     }
 
-    .card {
-        padding: 20px;
+    .card,
+    .tableCard {
+        padding: 15px;
     }
 
-    .card h2 {
+    .headerSection h2 {
         font-size: 24px;
     }
 
-    .camposEdicao {
-        grid-template-columns: repeat(2, 1fr);
+    .actions {
+        align-items: stretch;
+        flex-direction: column;
     }
-=======
-.container {
-padding: 25px 12px;
-}
 
+    .search {
+        max-width: 100%;
+    }
 
-.tableCard {
-    padding: 15px;
-}
+    .camposEdicao {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
-.headerSection h2 {
-    font-size: 24px;
-}
-
-.actions {
-    align-items: stretch;
-}
-
-.search {
-    max-width: 100%;
-}
-
->>>>>>> 6722cf1 (Atualizando projeto)
-
+    .tableWrapper,
+    .tabelaContainer {
+        overflow-x: auto;
+    }
 }
 
 @media (max-width: 500px) {
-
     .camposEdicao {
         grid-template-columns: 1fr;
     }
@@ -379,4 +345,7 @@ padding: 25px 12px;
         width: 100%;
     }
 
+    .tituloEdicao {
+        align-items: flex-start;
+    }
 }

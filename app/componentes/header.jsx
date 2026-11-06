@@ -33,11 +33,11 @@ export default function Header() {
         </nav>
 
         <Link
-          href="/cadalunos"
-          className="headerButton"
-        >
-          👤 &nbsp; Acessar sistema →
-        </Link>
+  href="/login"
+  className="headerButton"
+>
+  👤 &nbsp; LOGIN →
+</Link>
 
         <button className="mobileMenu">
           ☰
