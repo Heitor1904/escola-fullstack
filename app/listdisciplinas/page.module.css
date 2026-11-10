@@ -1,0 +1,173 @@
+
+.container {
+    min-height: calc(100vh - 80px);
+    padding: 40px 6%;
+    background: #f4f6f8;
+    color: #222;
+    box-sizing: border-box;
+}
+
+.headerSection {
+    margin-bottom: 25px;
+}
+
+.headerSection h2 {
+    margin: 0 0 10px;
+    color: #c8102e;
+    font-size: 30px;
+}
+
+.headerSection p {
+    margin: 0;
+    color: #666;
+    font-size: 15px;
+}
+
+.tableCard {
+    width: 100%;
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.search {
+    width: 100%;
+    max-width: 380px;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    outline: none;
+    background: #fff;
+    color: #222;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.search:focus {
+    border-color: #c8102e;
+    box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.12);
+}
+
+.total {
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table thead {
+    background: #c8102e;
+    color: #fff;
+}
+
+.table th {
+    padding: 16px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.table td {
+    padding: 15px 14px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    font-size: 14px;
+}
+
+.table tbody tr:hover {
+    background: #fff5f6;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.editButton,
+.deleteButton {
+    padding: 9px 14px;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.editButton {
+    background: #c8102e;
+}
+
+.editButton:hover {
+    background: #a50d25;
+}
+
+.deleteButton {
+    background: #333;
+}
+
+.deleteButton:hover {
+    background: #111;
+}
+
+.empty {
+    padding: 30px !important;
+    text-align: center;
+    color: #777 !important;
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 25px 4%;
+    }
+
+    .headerSection h2 {
+        font-size: 25px;
+    }
+
+    .tableCard {
+        padding: 15px;
+    }
+
+    .actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .search {
+        max-width: 100%;
+    }
+
+    .table th,
+    .table td {
+        padding: 12px 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

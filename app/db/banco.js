@@ -11,10 +11,10 @@ const caminhoBanco = path.join(
 
 const db = new Database(caminhoBanco);
 
-// Ativar a verificação das chaves estrangeiras
+// Ativar chaves estrangeiras
 db.pragma("foreign_keys = ON");
 
-// Criar as tabelas caso ainda não existam
+// Criar tabelas
 db.exec(`
     CREATE TABLE IF NOT EXISTS alunos (
         id_aluno INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -35,6 +35,23 @@ db.exec(`
         FOREIGN KEY (aluno_id)
             REFERENCES alunos(id_aluno)
             ON DELETE CASCADE
+    );
+
+    CREATE TABLE IF NOT EXISTS disciplinas (
+        id_disciplina INTEGER PRIMARY KEY AUTOINCREMENT,
+        nome TEXT NOT NULL,
+        pontuacao_minima REAL NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS professores (
+        id_professor INTEGER PRIMARY KEY AUTOINCREMENT,
+        nome TEXT NOT NULL,
+        nif TEXT NOT NULL UNIQUE,
+        dias_aula TEXT NOT NULL,
+        disciplina_id INTEGER NOT NULL,
+        total_aulas INTEGER NOT NULL,
+        FOREIGN KEY (disciplina_id)
+            REFERENCES disciplinas(id_disciplina)
     );
 `);
 
